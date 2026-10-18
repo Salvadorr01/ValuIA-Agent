@@ -1,0 +1,15 @@
+Criterios: MAPE < 10.0 %, cobertura >= 80.0 %, semillas [0, 1, 2, 3, 4]
+
+ escenario           tipo                                           nombre  MAPE_media  MAPE_desv  cumple_MAPE  cobertura_media  cobertura_desv  cumple_cobertura  incertidumbre_alta_%  rechazo_invalidas_%
+         1         Normal                           Configuración estándar        9.55       0.61         True            83.50            1.17              True                  0.40                  NaN
+         2         Normal                                Sin recalibración        9.54       0.55         True            83.60            1.08              True                  0.40                  NaN
+         3         Normal                     Recalibración cada 20 ventas        9.62       0.53         True            82.50            0.71              True                  0.40                  NaN
+         4         Normal                           Pocas propiedades (50)        9.11       0.85         True            85.60            1.67              True                  0.00                  NaN
+         5         Límite         Solo propiedades baratas (10 % inferior)       21.46       6.13        False            75.00            9.35             False                  0.00                  NaN
+         6         Límite           Solo propiedades caras (10 % superior)        8.01       1.24         True            82.00           10.37              True                  0.00                  NaN
+         7         Límite                        Historial reducido (20 %)       10.37       0.95        False            83.30            2.31              True                  0.40                  NaN
+         8         Límite Pocos comparables (10 % de las ventas recientes)        9.59       0.64         True            83.40            5.73              True                 27.20                  NaN
+         9 Falla esperada             Barrio desconocido (sin comparables)        9.87       0.63         True            94.70            0.57              True                100.00                  NaN
+        10 Falla esperada          20 % de propiedades con datos inválidos        9.22       0.65         True            82.88            1.14              True                  0.38                100.0
+        11 Falla esperada                 Choque de mercado: precios +30 %       17.76       0.76        False            40.00            4.02             False                  0.40                  NaN
+        12 Falla esperada                 Choque de mercado: precios -30 %       31.08       1.34        False            30.00            1.87             False                  0.40                  NaN

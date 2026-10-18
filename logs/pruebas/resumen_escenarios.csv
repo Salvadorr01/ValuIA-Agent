@@ -1,0 +1,13 @@
+escenario,tipo,nombre,esperado,ejecuciones,MAPE_media,MAPE_desv,MAPE_ejec_cumplen,cumple_MAPE,cobertura_media,cobertura_desv,cobertura_ejec_cumplen,cumple_cobertura,incertidumbre_alta_%,ancho_rango_medio_%,rechazo_invalidas_%,valoradas_media
+1,Normal,Configuración estándar,Cumple ambas medidas,5,9.5492,0.6079,3,True,83.5,1.1726,5,True,0.4,35.9007,,200.0
+2,Normal,Sin recalibración,"Cumple, quizá un poco peor que el 1",5,9.5445,0.5488,4,True,83.6,1.084,5,True,0.4,35.7233,,200.0
+3,Normal,Recalibración cada 20 ventas,"Cumple, similar al 1",5,9.6159,0.5308,3,True,82.5,0.7071,5,True,0.4,35.944,,200.0
+4,Normal,Pocas propiedades (50),"Cumple, con más variación entre semillas",5,9.1053,0.8475,4,True,85.6,1.6733,5,True,0.0,35.9299,,50.0
+5,Límite,Solo propiedades baratas (10 % inferior),Caso dudoso para el MAPE,5,21.4574,6.1263,0,False,75.0,9.3541,2,False,0.0,52.1442,,20.0
+6,Límite,Solo propiedades caras (10 % superior),Caso dudoso para el MAPE,5,8.0097,1.2398,4,True,82.0,10.3682,3,True,0.0,30.2822,,20.0
+7,Límite,Historial reducido (20 %),"MAPE más alto, tal vez cerca del 10 %",5,10.3675,0.946,2,False,83.3,2.3076,4,True,0.4,37.8847,,200.0
+8,Límite,Pocos comparables (10 % de las ventas recientes),Más casos con incertidumbre alta y rangos más anchos,5,9.5906,0.6424,3,True,83.4,5.7271,4,True,27.2,41.9992,,200.0
+9,Falla esperada,Barrio desconocido (sin comparables),Marca incertidumbre alta en el 100 % de los casos y no se cae,5,9.8742,0.6292,3,True,94.7,0.5701,5,True,100.0,54.6585,,200.0
+10,Falla esperada,20 % de propiedades con datos inválidos,Rechaza el 100 % de las inválidas y no publica nada de ellas,5,9.2181,0.6473,4,True,82.875,1.1354,5,True,0.375,36.1685,100.0,160.0
+11,Falla esperada,Choque de mercado: precios +30 %,MAPE y cobertura por debajo del umbral,5,17.7551,0.7603,0,False,40.0,4.0156,0,False,0.4,36.99,,200.0
+12,Falla esperada,Choque de mercado: precios -30 %,MAPE y cobertura por debajo del umbral,5,31.0849,1.3363,0,False,30.0,1.8708,0,False,0.4,40.1286,,200.0
