@@ -1,0 +1,7 @@
+marca_de_tiempo,semilla,id_propiedad,evento,detalle
+2026-10-17T22:09:43.174,0,,inicio,"{""historial"": 1941}"
+2026-10-17T22:09:51.572,0,900001,percepcion,"{""area_m2"": 140, ""habitaciones"": 3, ""barrio"": ""NAmes"", ""antiguedad"": 30, ""calidad"": 6, ""sotano_m2"": 90, ""garaje_autos"": 2, ""banos"": 2, ""medios_banos"": 0, ""lote_m2"": 900, ""condicion"": 5, ""primer_piso_m2"": 90, ""anios_remodelacion"": 20, ""chimeneas"": 1}"
+2026-10-17T22:09:51.638,0,900001,decision,"{""precio"": 168154.89, ""precio_modelo"": 169879.93, ""factor_mercado"": 0.99, ""n_comparables"": 10, ""incertidumbre"": ""normal"", ""rango"": [135267.87, 209037.59]}"
+2026-10-17T22:09:51.639,0,900001,accion,"{""publicado"": 168154.89}"
+2026-10-17T22:10:40.300,0,900002,percepcion,"{""area_m2"": ""abc"", ""habitaciones"": 3, ""barrio"": ""NAmes"", ""antiguedad"": 30, ""calidad"": 6, ""sotano_m2"": 90, ""garaje_autos"": 2, ""banos"": 2, ""medios_banos"": 0, ""lote_m2"": 900, ""condicion"": 5, ""primer_piso_m2"": 90, ""anios_remodelacion"": 20, ""chimeneas"": 1}"
+2026-10-17T22:10:40.302,0,900002,percepcion_invalida,"{""errores"": [""area_m2 no es numérico""]}"
