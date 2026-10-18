@@ -72,10 +72,17 @@ with tab1:
     st.subheader("Describe la propiedad")
     agente, barrios = cargar_agente()
     st.caption("Barrios conocidos: " + ", ".join(barrios))
-    st.caption(
-        "Prueba también un caso de falla: escribe un área negativa o un texto en un barrio que no "
-        "existe, y mira cómo reacciona el agente."
-    )
+    with st.expander("Casos de prueba sugeridos"):
+        st.markdown(
+            "1. **Caso típico:** pulsa «Valorar propiedad» sin cambiar nada. Esperado: precio de "
+            "referencia cercano a USD 168 mil, rango de unos USD 135 mil a 209 mil e incertidumbre normal.\n"
+            "2. **Dato inválido (falla esperada):** cambia el área construida a `-50`. Esperado: mensaje "
+            "de error; el agente rechaza la propiedad y no publica nada.\n"
+            "3. **Barrio desconocido (falla esperada):** escribe el barrio `Zzz`. Esperado: aviso de "
+            "incertidumbre alta, sin comparables y con un rango más ancho.\n"
+            "4. **Simulación completa:** en la pestaña «Simulación completa» usa la semilla 0. Esperado: "
+            "MAPE 9,24 %, cobertura 84,5 % y 4 recalibraciones."
+        )
 
     with st.form("formulario_propiedad"):
         columnas = st.columns(3)

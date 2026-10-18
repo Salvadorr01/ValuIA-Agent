@@ -72,6 +72,19 @@ Evidencia completa en `logs/pruebas/`:
 | `detalle_propiedades.csv` | Una fila por propiedad valorada |
 | `eventos_escenario9_semilla0.csv`, `eventos_escenario10_semilla0.csv` | Log de eventos del agente en dos fallas esperadas |
 
+## Casos de prueba sugeridos
+
+Para ver el agente en funcionamiento, en la aplicación desplegada (https://valuia-agent.streamlit.app/) se sugiere probar estos cuatro casos, en este orden:
+
+| Caso | Qué hacer | Resultado esperado |
+|---|---|---|
+| Típico | En la pestaña "Valorar una propiedad", pulsar "Valorar propiedad" sin cambiar los valores | Precio de referencia cercano a USD 168 mil, con un rango de unos USD 135 mil a 209 mil e incertidumbre normal (10 comparables). El valor exacto puede variar unos pocos miles de dólares entre consultas, porque los comparables se eligen al azar |
+| Dato inválido (falla esperada) | Cambiar el área construida a `-50` y pulsar "Valorar propiedad" | Mensaje de error: el agente rechaza la propiedad, indica el motivo (`area_m2=-50.0 fuera de rango (10 a 1000)`) y no publica ninguna sugerencia |
+| Barrio desconocido (falla esperada) | Escribir el barrio `Zzz` y pulsar "Valorar propiedad" | Aviso de incertidumbre alta: no hay ventas comparables y el rango es más ancho |
+| Simulación completa | En la pestaña "Simulación completa", dejar la semilla en 0 y pulsar "Ejecutar simulación" | MAPE de 9,24 %, cobertura de 84,5 % y 4 recalibraciones; las dos medidas cumplen su umbral |
+
+Los resultados de los 12 escenarios de la Fase 3 están en la pestaña "Pruebas de la Fase 3" y en `logs/pruebas/`.
+
 ## Requisitos
 
 - Python 3.13
